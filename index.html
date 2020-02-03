@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vernam Cipher</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1 class="title">VERNAM CIPHER(one-time pads)</h1>
+
+    <div style="margin: 30px 200px; ">
+      <div class="child">
+        <h1 class="sub-title">Encryption</h1>
+        <div>
+          <label>Secret Key</label>
+          <input
+            id="enc_key"
+            type="text"
+            style="width: 100%;height: 25px;border: 2px solid rgb(190, 243, 216);"
+            placeholder="Enter the secret key here"
+          />
+        </div>
+        <div style="margin-top: 10px;">
+          <label>Original Message</label>
+          <textarea
+            id="enc_original_text"
+            type="text"
+            autofocus
+            cols="30"
+            rows="10"
+            style="border: 2px solid rgb(190, 243, 216);"
+            placeholder="Enter the original message here"
+          ></textarea>
+        </div>
+        <div>
+          <button class="enc-btn" onclick="to_cipher()">ENCRYPT</button>
+        </div>
+        <div style="margin-top: 10px;">
+          <label>Cipher Text</label>
+          <textarea
+            id="enc_cipher_text"
+            type="text"
+            autofocus
+            cols="30"
+            rows="10"
+            readonly
+            style="border: 2px solid rgb(190, 243, 216);"
+          ></textarea>
+        </div>
+      </div>
+      <div class="child" style="float: right;">
+        <h1 class="sub-title">Decryption</h1>
+        <div>
+          <label>Secret Key</label>
+          <input
+            id="dec_key"
+            type="text"
+            style="width: 100%;height: 25px;border: 2px solid rgb(190, 243, 216);"
+            placeholder="Enter the secret key here"
+          />
+        </div>
+        <div style="margin-top: 10px;">
+          <label>Cipher Text</label>
+          <textarea
+            id="dec_cipher_text"
+            type="text"
+            autofocus
+            cols="30"
+            rows="10"
+            style="border: 2px solid rgb(190, 243, 216);"
+          ></textarea>
+        </div>
+        <div>
+          <button class="enc-btn" onclick="to_plain()">DECRYPT</button>
+        </div>
+        <div style="margin-top: 10px;">
+          <label>Original Message</label>
+          <textarea
+            id="dec_original_text"
+            type="text"
+            autofocus
+            cols="30"
+            rows="10"
+            readonly
+            style="border: 2px solid rgb(190, 243, 216);"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/other.js"></script>
+  </body>
+</html>
